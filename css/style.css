@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root{
+    --header-background: #012D63;
+    --header-text: #C7C7C7;
+    --nike-color: #FFFFFF;
+
+
+}
+
+body{
+    font-family: "Roboto";
+}
+
+.header{
+    display: flex;
+    width: 1440px;
+    height: 90px;
+    background-color: var(--header-background);
+    margin: 0 auto;
+
+
+}
+
+.header-menu a{
+    color: var(--header-text);
+    text-decoration: none;
+}
+
+.header-list, .header-language, .header-menu{
+    display: flex;
+}
+
+.header-nike{
+    margin: 16px 152px 16px 168px;
+}
+
+.header-menu{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 28.13px;
+}
+
+.header-main{
+    width: 112px;
+
+}
+
+.header-benefits{
+    width: 86px;
+}
+
+.header-advantages{
+    width: 125px;
+}
+
+.header-reviews{
+    width: 88pxpx;
+}
+
+.header-contacts{
+    width: 96px;
+}
+
+
+.header-order{
+    width: 58px;
+}
+
+
+.header-language{
+    width: 81px;
+    justify-content: space-between;
+
+    margin-left: 73px;
+}
+
+.header-list{
+    width: 701px;
+    justify-content: space-between;
+}
+
+.header-menu a:hover{
+font-weight: 400;
+color: var(--nike-color);
+
+}
