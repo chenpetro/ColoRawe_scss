@@ -1,89 +1,513 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
-:root{
-    --header-background: #012D63;
-    --header-text: #C7C7C7;
-    --nike-color: #FFFFFF;
-
-
-}
-
-body{
-    font-family: "Roboto";
-}
-
-.header{
-    display: flex;
-    width: 1440px;
-    height: 90px;
-    background-color: var(--header-background);
-    margin: 0 auto;
-
+:root {
+  --header-background: #012d63;
+  --header-text: #c7c7c7;
+  --nike-color: #ffffff;
+  --button-color: #8e32c6;
+  --date-color: #d8d8d8;
+  --footer-background: #021635;
+  --footer-line: #9B9B9B;
 
 }
 
-.header-menu a{
-    color: var(--header-text);
-    text-decoration: none;
+body {
+  font-family: "Roboto";
 }
 
-.header-list, .header-language, .header-menu{
-    display: flex;
+.header {
+  display: flex;
+  width: 1440px;
+  height: 90px;
+  background-color: var(--header-background);
+  margin: 0 auto;
 }
 
-.header-nike{
-    margin: 16px 152px 16px 168px;
+.header-menu a {
+  color: var(--header-text);
+  text-decoration: none;
 }
 
-.header-menu{
-    margin-top: 30px;
-    margin-bottom: 30px;
-    font-size: 24px;
-    font-weight: 300;
-    line-height: 28.13px;
+.header-list,
+.header-language,
+.header-menu {
+  display: flex;
 }
 
-.header-main{
-    width: 112px;
+.header-nike {
+  margin: 16px 152px 16px 168px;
+}
+
+.header-menu {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 28.13px;
+}
+
+.header-main {
+  width: 112px;
+}
+
+.header-benefits {
+  width: 86px;
+}
+
+.header-advantages {
+  width: 125px;
+}
+
+.header-reviews {
+  width: 88pxpx;
+}
+
+.header-contacts {
+  width: 96px;
+}
+
+.header-order {
+  width: 58px;
+}
+
+.header-language {
+  width: 81px;
+  justify-content: space-between;
+
+  margin-left: 73px;
+}
+
+.header-list {
+  width: 701px;
+  justify-content: space-between;
+}
+
+.header-menu a:hover {
+  font-weight: 400;
+  color: var(--nike-color);
+}
+
+.main-call_to_action_wrapper {
+  width: 1440px;
+  height: 858px;
+  background: url("../img/colorawe.jpg") no-repeat center/cover;
+  margin: 0 auto;
+}
+
+.main-call_to_action {
+  margin-left: 156px;
+  color: var(--nike-color);
+  display: flex;
+  flex-direction: column;
+}
+
+.nike-main {
+  width: 160px;
+  height: 120px;
+  margin-top: 94px;
+}
+
+/* .nike-main::after {
+  content: С&R;
+  position: absolute;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 63.6px;
+  text-align: left;
+} */
+
+.nike-container {
+  position: relative;
+  margin-left: 14px;
+}
+
+.text-c_and_r {
+  position: absolute;
+  bottom: -20px;
+  left: 25px;
+  font-family: "PT Serif";
+  font-size: 48px;
+  font-weight: 400;
+}
+
+.mainlogo {
+  font-size: 144px;
+  font-weight: 400;
+  margin-top: 5px;
+  margin-top: 27px;
+  font-family: "Playfair Display";
+}
+
+.yourdream-text {
+  margin-left: 8px;
+  font-family: "Playfair Display";
+  font-size: 72px;
+  font-weight: 400;
+}
+
+.main-call_to_action-text {
+  margin-left: 8px;
+  margin-top: 25px;
+  font-weight: 400;
+  font-size: 18px;
+  width: 508px;
+  height: 84px;
+  top: 573px;
+  margin-bottom: 41px;
+}
+
+.button-buy_my_nike {
+  width: 254px;
+  height: 67px;
+  border-radius: 10px;
+  background-color: var(--button-color);
+  color: var(--nike-color);
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 28.13px;
+}
+
+.benefits-wrapper {
+  background: url("../img/benefitsbackground.jpg") no-repeat center/cover;
+  width: 1440px;
+  height: 606px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.benefits {
+  width: 1110px;
+  height: 396px;
+  border: 5px solid var(--button-color);
+  display: flex;
+  padding-right: 50px;
+  padding-left: 50px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.benefits-item-img {
+  width: 240px;
+  height: 240px;
+}
+
+.benefits-item-paint {
+  width: 430px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-right: 1px solid var(--nike-color);
+  border-left: 1px solid var(--nike-color);
+}
+
+.benefits-item-quality,
+.benefits-item-shipping {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.benefits-item-title-quality,
+.benefits-item-title-paint,
+.benefits-item-title-shipping {
+  font-family: "Playfair Display";
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 47.99px;
+  color: var(--nike-color);
+
+  width: 159px;
+  height: 102px;
+}
+
+.benefits-item-title-quality,
+.benefits-item-title-shipping {
+  margin-bottom: 4px;
+  text-align: center;
+}
+
+.benefits-item-title-paint {
+  margin-top: 4px;
+  text-align: center;
+}
+
+.reviews-wrapper {
+  width: 1440px;
+  height: 520px;
+  background: url("../img/reviewsbackground.jpg") no-repeat center/cover;
+  margin: 0 auto;
+  display: flex;
+  border: 2px solid var(--nike-color);
+  flex-direction: column;
+}
+
+.reviews-title, .order-title {
+  width: 175px;
+  height: 65px;
+  font-family: "Playfair Display";
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 63.98px;
+  color: var(--nike-color);
+  margin-top: 24px;
+  margin-bottom: 24px;
+  align-self: center;
+}
+
+.reviews {
+  display: flex;
+  width: 1440px;
+  height: 407px;
+  background: url("../img/leaves.png") no-repeat bottom left;
+  background-size: 226px 380px;
+}
+
+.reviews-list {
+  width: 951px;
+  height: 292px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  color: var(--nike-color);
+}
+.reviews-text {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 28.13px;
+  width: 228px;
+  height: 112px;
+  margin-top: 49px;
+  margin-bottom: 8px;
+}
+
+.review-item1,
+.review-item2,
+.review-item3 {
+  width: 255px;
+  height: 292px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  padding-left: 13px;
+ }
+
+.review-item1 {
+  background: linear-gradient(
+    136.55deg,
+    #00e5e6 7.29%,
+    #00a8f7 26.04%,
+    #9a76f9 62.5%,
+    #cc5ec2 100%
+  );
+  box-shadow: 0px 14px 0px -5px #7b54b2, 0px 30px 0px -13px #533978;
+}
+
+.review-item2 {
+  background: linear-gradient(
+    136.55deg,
+    #ff68b4 0%,
+    #ff45e1 26.04%,
+    #ce3aff 62.84%,
+    #8961ff 100%
+  );
+  box-shadow: 0px 14px 0px -5px #9159b1, 0px 30px 0px -13px #61337c;
+}
+
+.review-item3 {
+  background: linear-gradient(
+    142.67deg,
+    #ffe128 0%,
+    #ff9b5c 30.21%,
+    #ff8381 63.29%,
+    #ff5489 100%
+  );
+  box-shadow: 0px 14px 0px -5px #b95a4c, 0px 30px 0px -13px #732f26;
+}
+
+.review-item-date {
+  width: 36px;
+  height: 16px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.41px;
+  color: var(--date-color);
+  margin-bottom: 47px;
+}
+
+.reviews-img {
+  width: 31px;
+  height: 31px;
+  margin-right: 5px;
+  }
+
+.review-author-name {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.41px;
+}
+
+.review-from-when {
+  width: 99px;
+  height: 14px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.06px;
+  color: var(--date-color);
+}
+
+.review-about{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1px;
+}
+
+
+.reviews-author{
+  display: flex;
 
 }
 
-.header-benefits{
-    width: 86px;
+.order{
+  width: 1440px;
+  height: 509px;
+  background: url("../img/orderbackground.png") no-repeat center/cover;
+margin: 0 auto;
+display: flex;
+flex-direction: column;
+
 }
 
-.header-advantages{
-    width: 125px;
-}
-
-.header-reviews{
-    width: 88pxpx;
-}
-
-.header-contacts{
-    width: 96px;
-}
-
-
-.header-order{
-    width: 58px;
-}
-
-
-.header-language{
-    width: 81px;
-    justify-content: space-between;
-
-    margin-left: 73px;
-}
-
-.header-list{
-    width: 701px;
-    justify-content: space-between;
-}
-
-.header-menu a:hover{
+.order-title{
+  margin-top: 20px;
+  margin-bottom: 33px;
+  width: 130px;
+height: 64px;
+font-family: "Playfair Display";
+font-size: 48px;
 font-weight: 400;
-color: var(--nike-color);
+line-height: 63.98px;
+
+
 
 }
+
+.order-form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.order-button{
+  width: 248px;
+height: 68px;
+border-radius: 16px;
+background-color: var(--button-color);
+font-size: 24px;
+font-weight: 400;
+line-height: 28.13px;
+color: var(--nike-color);
+border: none;
+}
+
+.input-email{
+  width: 690px;
+  height: 60px;
+  border-radius: 50px;
+font-size: 28px;
+font-weight: 400;
+line-height: 32.81px;
+padding-left: 25px;
+border: none;
+margin-bottom: 19px;
+}
+
+.input-field{
+  width: 580px;
+height: 50px;
+border-radius: 50px;
+font-size: 24px;
+font-weight: 400;
+line-height: 28.13px;
+padding-left: 25px;
+margin-bottom: 19px;
+border: none;
+}
+
+
+footer{
+  width: 1440px;
+height: 292px;
+background-color: var(--footer-background);
+margin: 0 auto;
+display: flex;
+flex-direction: column;
+}
+
+
+.footer-wrapper-top{
+  width: 1110px;
+  height: 169px;
+  margin: 0 auto;
+  border-bottom: 1px solid var(--footer-line);
+  display: flex;
+}
+.footer-left-top-section, .footer-right-top-section{
+width: 555px;
+margin-top: 45px;
+}
+
+.footer-wrapper-top p, .footer-wrapper-top a {
+font-size: 24px;
+font-weight: 400;
+line-height: 28px;
+color: var(--nike-color);
+display: block;
+margin-bottom: 10px;
+}
+
+.footer-wrapper-top a {
+ float: right;
+  }
+
+  .footer-wrapper-bottom{
+    width: 1110px;
+    height: 123px;
+    margin: 0 auto;
+    display: flex;
+  }
+.footer-wrapper-bottom-left p{
+height: 21px;
+  font-size: 18px;
+font-weight: 400;
+line-height: 21.09px;
+color: var(--nike-color);
+width: 1041px;
+}
+
+.rightsreserved{
+  margin-top: 24px;
+  margin-bottom: 7px;
+}
+
+.footer-wrapper-bottom-right p{
+  width: 60px;
+height: 86px;
+color: var(--nike-color);
+font-family: "PT Serif";
+font-size: 24px;
+font-weight: 400;
+line-height: 31.8px;
+margin-top: 60px;
+}
+
+.footer-wrapper-bottom{
+  width: 1110px;
+  background: url('../img/nike.svg') no-repeat;
+  background-position: 1015px -1px;
+background-size: 108px 81px;
+}
+
+
