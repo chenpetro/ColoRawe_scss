@@ -7,8 +7,11 @@
   --button-color: #8e32c6;
   --date-color: #d8d8d8;
   --footer-background: #021635;
-  --footer-line: #9B9B9B;
+  --footer-line: #9b9b9b;
+}
 
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -133,7 +136,7 @@ body {
 .mainlogo {
   font-size: 144px;
   font-weight: 400;
-  margin-top: 5px;
+
   margin-top: 27px;
   font-family: "Playfair Display";
 }
@@ -243,7 +246,8 @@ body {
   flex-direction: column;
 }
 
-.reviews-title, .order-title {
+.reviews-title,
+.order-title {
   width: 175px;
   height: 65px;
   font-family: "Playfair Display";
@@ -292,7 +296,7 @@ body {
   flex-direction: column;
   border-radius: 15px;
   padding-left: 13px;
- }
+}
 
 .review-item1 {
   background: linear-gradient(
@@ -341,7 +345,7 @@ body {
   width: 31px;
   height: 31px;
   margin-right: 5px;
-  }
+}
 
 .review-author-name {
   font-size: 14px;
@@ -358,156 +362,167 @@ body {
   color: var(--date-color);
 }
 
-.review-about{
+.review-about {
   display: flex;
   flex-direction: column;
   margin-bottom: 1px;
 }
 
-
-.reviews-author{
+.reviews-author {
   display: flex;
-
 }
 
-.order{
+.order {
   width: 1440px;
   height: 509px;
   background: url("../img/orderbackground.png") no-repeat center/cover;
-margin: 0 auto;
-display: flex;
-flex-direction: column;
-
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
 }
 
-.order-title{
+.order-title {
   margin-top: 20px;
   margin-bottom: 33px;
   width: 130px;
-height: 64px;
-font-family: "Playfair Display";
-font-size: 48px;
-font-weight: 400;
-line-height: 63.98px;
-
-
-
+  height: 64px;
+  font-family: "Playfair Display";
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 63.98px;
 }
 
-.order-form{
+.order-form {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.order-button{
+.order-button {
   width: 248px;
-height: 68px;
-border-radius: 16px;
-background-color: var(--button-color);
-font-size: 24px;
-font-weight: 400;
-line-height: 28.13px;
-color: var(--nike-color);
-border: none;
+  height: 68px;
+  border-radius: 16px;
+  background-color: var(--button-color);
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 28.13px;
+  color: var(--nike-color);
+  border: none;
 }
 
-.input-email{
+.input-email {
   width: 690px;
   height: 60px;
   border-radius: 50px;
-font-size: 28px;
-font-weight: 400;
-line-height: 32.81px;
-padding-left: 25px;
-border: none;
-margin-bottom: 19px;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 32.81px;
+  padding-left: 25px;
+  border: none;
+  margin-bottom: 19px;
 }
 
-.input-field{
+.input-field {
   width: 580px;
-height: 50px;
-border-radius: 50px;
-font-size: 24px;
-font-weight: 400;
-line-height: 28.13px;
-padding-left: 25px;
-margin-bottom: 19px;
-border: none;
+  height: 50px;
+  border-radius: 50px;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 28.13px;
+  padding-left: 25px;
+  margin-bottom: 19px;
+  border: none;
 }
 
-
-footer{
+footer {
   width: 1440px;
-height: 292px;
-background-color: var(--footer-background);
-margin: 0 auto;
-display: flex;
-flex-direction: column;
+  height: 292px;
+  background-color: var(--footer-background);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
 }
 
-
-.footer-wrapper-top{
+.footer-wrapper-top {
   width: 1110px;
   height: 169px;
   margin: 0 auto;
   border-bottom: 1px solid var(--footer-line);
   display: flex;
 }
-.footer-left-top-section, .footer-right-top-section{
-width: 555px;
-margin-top: 45px;
+.footer-left-top-section,
+.footer-right-top-section {
+  width: 555px;
+  margin-top: 45px;
 }
 
-.footer-wrapper-top p, .footer-wrapper-top a {
-font-size: 24px;
-font-weight: 400;
-line-height: 28px;
-color: var(--nike-color);
-display: block;
-margin-bottom: 10px;
+.footer-wrapper-top p,
+.footer-wrapper-top a {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 28px;
+  color: var(--nike-color);
+  display: block;
+  margin-bottom: 10px;
 }
 
 .footer-wrapper-top a {
- float: right;
-  }
-
-  .footer-wrapper-bottom{
-    width: 1110px;
-    height: 123px;
-    margin: 0 auto;
-    display: flex;
-  }
-.footer-wrapper-bottom-left p{
-height: 21px;
-  font-size: 18px;
-font-weight: 400;
-line-height: 21.09px;
-color: var(--nike-color);
-width: 1041px;
+  float: right;
 }
 
-.rightsreserved{
+.footer-wrapper-bottom {
+  width: 1110px;
+  height: 123px;
+  margin: 0 auto;
+  display: flex;
+}
+.footer-wrapper-bottom-left p {
+  height: 21px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21.09px;
+  color: var(--nike-color);
+  width: 1041px;
+}
+
+.rightsreserved {
   margin-top: 24px;
   margin-bottom: 7px;
 }
 
-.footer-wrapper-bottom-right p{
+.footer-wrapper-bottom-right p {
   width: 60px;
-height: 86px;
-color: var(--nike-color);
-font-family: "PT Serif";
-font-size: 24px;
-font-weight: 400;
-line-height: 31.8px;
-margin-top: 60px;
+  height: 86px;
+  color: var(--nike-color);
+  font-family: "PT Serif";
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 31.8px;
+  margin-top: 60px;
 }
 
-.footer-wrapper-bottom{
+.footer-wrapper-bottom {
   width: 1110px;
-  background: url('../img/nike.svg') no-repeat;
+  background: url("../img/nike.svg") no-repeat;
   background-position: 1015px -1px;
-background-size: 108px 81px;
+  background-size: 108px 81px;
 }
 
+.order {
+  position: relative;
+}
 
+.confirm {
+  position: absolute;
+  width: 250px;
+  height: 50px;
+  top: 124px;
+  left: 808px;
+  border-style: none;
+  border-radius: 50px;
+  color: var(--footer-line);
+  background-color: var(--nike-color);
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 32.81px;
+}
