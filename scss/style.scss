@@ -1,0 +1,458 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+$header-background: #012d63;
+$header-text: #c7c7c7;
+$nike-color: #ffffff;
+$button-color: #8e32c6;
+$date-color: #d8d8d8;
+$footer-background: #021635;
+$footer-line: #9b9b9b;
+
+%flex {
+  display: flex;
+}
+
+@mixin size($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin bgPhoto($url, $repeat, $position, $size) {
+  background-image: $url;
+  background-repeat: $repeat;
+  background-position: $position;
+  background-size: $size;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto";
+}
+
+.header {
+  @extend %flex;
+  @include size(1440px, 90px);
+  background-color: $header-background;
+  margin: 0 auto;
+  &__nike {
+    margin: 16px 152px 16px 168px;
+  }
+  &__menu {
+    @extend %flex;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 28.13px;
+    & a {
+      color: $header-text;
+      text-decoration: none;
+      &:hover {
+        font-weight: 400;
+        color: $nike-color;
+      }
+    }
+    &__list {
+      width: 710px;
+      @extend %flex;
+
+      justify-content: space-between;
+    }
+    &__language {
+      @extend %flex;
+      width: 81px;
+      justify-content: space-between;
+      margin-left: 73px;
+    }
+  }
+}
+
+.action {
+@include size(1440px, 858px);
+  @include bgPhoto(url("../img/colorawe.jpg"), no-repeat, center, cover);
+  // background: url("../img/colorawe.jpg") no-repeat center/cover;
+  margin: 0 auto;
+  &__container {
+    margin-left: 156px;
+    color: $nike-color;
+    @extend %flex;
+    flex-direction: column;
+    &__nike {
+      position: relative;
+      margin-left: 14px;
+      &__main {
+        @include size(160px, 120px);
+        margin-top: 94px;
+      }
+      &__cr {
+        position: absolute;
+        bottom: -20px;
+        left: 25px;
+        font-family: "PT Serif";
+        font-size: 48px;
+        font-weight: 400;
+      }
+    }
+    &__title {
+      font-size: 144px;
+      font-weight: 400;
+      margin-top: 27px;
+      font-family: "Playfair Display";
+    }
+    &__subtitle {
+      margin-left: 8px;
+      font-family: "Playfair Display";
+      font-size: 72px;
+      font-weight: 400;
+    }
+    &__text {
+      margin-left: 8px;
+      margin-top: 25px;
+      font-weight: 400;
+      font-size: 18px;
+      @include size(508px, 84px);
+      top: 573px;
+      margin-bottom: 41px;
+    }
+    &__button {
+      @include size(254px, 67px);
+      border-radius: 10px;
+      background-color: $button-color;
+      color: $nike-color;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 28.13px;
+    }
+  }
+}
+
+.benefits {
+  @include bgPhoto(
+    url("../img/benefitsbackground.jpg"),
+    no-repeat,
+    center,
+    cover
+  );
+  // background: url("../img/benefitsbackground.jpg") no-repeat center/cover;
+  @include size(1440px, 606px);
+  margin: 0 auto;
+  @extend %flex;
+  justify-content: center;
+  align-items: center;
+  &__box {
+    @include size(1110px, 396px);
+    border: 5px solid $button-color;
+    @extend %flex;
+    padding-right: 50px;
+    padding-left: 50px;
+    justify-content: space-between;
+    align-items: center;
+    &__quality {
+      @extend %flex;
+      flex-direction: column;
+      align-items: center;
+      &__title {
+        font-family: "Playfair Display";
+        font-size: 36px;
+        font-weight: 400;
+        line-height: 47.99px;
+        color: $nike-color;
+        @include size(159px, 102px);
+      }
+    }
+    &__paint {
+      width: 430px;
+      @extend %flex;
+      flex-direction: column;
+      align-items: center;
+      border-right: 1px solid $nike-color;
+      border-left: 1px solid $nike-color;
+      &__title {
+        font-family: "Playfair Display";
+        font-size: 36px;
+        font-weight: 400;
+        line-height: 47.99px;
+        color: $nike-color;
+        @include size(159px, 102px);
+        margin-top: 4px;
+        text-align: center;
+      }
+    }
+    &__shipping {
+      @extend %flex;
+      flex-direction: column;
+      align-items: center;
+      &__title {
+        font-family: "Playfair Display";
+        font-size: 36px;
+        font-weight: 400;
+        line-height: 47.99px;
+        color: $nike-color;
+        @include size(159px, 102px);
+        margin-bottom: 4px;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.reviews {
+  @include size(1440px, 520px);
+  @include bgPhoto(
+    url("../img/reviewsbackground.jpg"),
+    no-repeat,
+    center,
+    cover
+  );
+  // background: url("../img/reviewsbackground.jpg") no-repeat center/cover;
+  margin: 0 auto;
+  @extend %flex;
+  border: 2px solid $nike-color;
+  flex-direction: column;
+  &__title {
+    @include size(175px, 65px);
+    font-family: "Playfair Display";
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 63.98px;
+    color: $nike-color;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    align-self: center;
+  }
+  &__box {
+    @extend %flex;
+    @include size(1440px, 407px);
+    @include bgPhoto(url("../img/leaves.png"), no-repeat, bottom left, cover);
+    // background: url("../img/leaves.png") no-repeat bottom left;
+    background-size: 226px 380px;
+    &__list {
+      @include size(951px, 292px);
+      margin: 0 auto;
+      @extend %flex;
+      justify-content: space-between;
+      color: $nike-color;
+      &__item1 {
+        @include size(255px, 292px);
+        border-radius: 15px;
+        @extend %flex;
+        flex-direction: column;
+        border-radius: 15px;
+        padding-left: 13px;
+        background: linear-gradient(
+          136.55deg,
+          #00e5e6 7.29%,
+          #00a8f7 26.04%,
+          #9a76f9 62.5%,
+          #cc5ec2 100%
+        );
+        box-shadow: 0px 14px 0px -5px #7b54b2, 0px 30px 0px -13px #533978;
+        &__text {
+          font-size: 24px;
+          font-weight: 400;
+          line-height: 28.13px;
+          @include size(228px, 112px);
+          margin-top: 49px;
+          margin-bottom: 8px;
+        }
+        &__date {
+          @include size(36px, 16px);
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 16.41px;
+          color: $date-color;
+          margin-bottom: 47px;
+        }
+        &__author {
+          @extend %flex;
+          &__name {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 16.41px;
+          }
+          &__about {
+            @extend %flex;
+            flex-direction: column;
+            margin-bottom: 1px;
+          }
+          &__date {
+            @include size(99px, 14px);
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 14.06px;
+            color: $date-color;
+          }
+        }
+        &__img {
+          @include size(31px, 31px);
+          margin-right: 5px;
+        }
+      }
+      &__item2 {
+        @include size(255px, 292px);
+        border-radius: 15px;
+        @extend %flex;
+        flex-direction: column;
+        border-radius: 15px;
+        padding-left: 13px;
+        background: linear-gradient(
+          136.55deg,
+          #ff68b4 0%,
+          #ff45e1 26.04%,
+          #ce3aff 62.84%,
+          #8961ff 100%
+        );
+        box-shadow: 0px 14px 0px -5px #9159b1, 0px 30px 0px -13px #61337c;
+      }
+      &__item3 {
+        @include size(255px, 292px);
+        border-radius: 15px;
+        @extend %flex;
+        flex-direction: column;
+        border-radius: 15px;
+        padding-left: 13px;
+        background: linear-gradient(
+          142.67deg,
+          #ffe128 0%,
+          #ff9b5c 30.21%,
+          #ff8381 63.29%,
+          #ff5489 100%
+        );
+        box-shadow: 0px 14px 0px -5px #b95a4c, 0px 30px 0px -13px #732f26;
+      }
+    }
+  }
+}
+
+.order {
+  @include size(1440px, 529px);
+  position: relative;
+  @include bgPhoto(url("../img/orderbackground.png"), no-repeat, center, cover);
+  // background: url("../img/orderbackground.png") no-repeat center/cover;
+  margin: 0 auto;
+  @extend %flex;
+  flex-direction: column;
+  &__title {
+    font-family: "Playfair Display";
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 63.98px;
+    color: $nike-color;
+    align-self: center;
+    margin-top: 20px;
+    margin-bottom: 33px;
+    @include size(130px, 64px);
+  }
+  &__form {
+    @extend %flex;
+    flex-direction: column;
+    align-items: center;
+    &__input {
+      @include size(690px, 60px);
+      border-radius: 50px;
+      font-size: 28px;
+      font-weight: 400;
+      line-height: 32.81px;
+      padding-left: 25px;
+      border: none;
+      margin-bottom: 19px;
+    }
+    &__button {
+      @include size(248px, 68px);
+      border-radius: 16px;
+      background-color: $button-color;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 28.13px;
+      color: $nike-color;
+      border: none;
+    }
+  }
+  &__confirm {
+    position: absolute;
+    @include size(250px, 50px);
+    top: 124px;
+    left: 808px;
+    border-style: none;
+    border-radius: 50px;
+    color: $footer-line;
+    background-color: $nike-color;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 32.81px;
+  }
+}
+
+.footer {
+  @include size(1440px, 292px);
+  background-color: $footer-background;
+  margin: 0 auto;
+  @extend %flex;
+  flex-direction: column;
+  &__top {
+    @include size(1110px, 169px);
+    margin: 0 auto;
+    border-bottom: 1px solid $footer-line;
+    @extend %flex;
+    & p {
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 28px;
+      color: $nike-color;
+      display: block;
+      margin-bottom: 10px;
+    }
+    & a {
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 28px;
+      color: $nike-color;
+      display: block;
+      margin-bottom: 10px;
+      float: right;
+    }
+    &__left {
+      width: 555px;
+      margin-top: 45px;
+    }
+    &__right {
+      width: 555px;
+      margin-top: 45px;
+    }
+  }
+  &__bottom {
+    @include size(1110px, 123px);
+    margin: 0 auto;
+    @extend %flex;
+    @include bgPhoto(url("../img/nike.svg"), no-repeat, center, cover);
+    // background: url("../img/nike.svg") no-repeat;
+    background-position: 1015px -1px;
+    background-size: 108px 81px;
+    &__left {
+      &__rights {
+        margin-top: 24px;
+        margin-bottom: 7px;
+      }
+      & p {
+        height: 21px;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 21.09px;
+        color: $nike-color;
+        width: 1041px;
+      }
+    }
+    &__right p {
+      @include size(60px, 86px);
+      color: $nike-color;
+      font-family: "PT Serif";
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 31.8px;
+      margin-top: 60px;
+    }
+  }
+}

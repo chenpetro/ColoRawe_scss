@@ -1,13 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
-
-:root {
-  --header-background: #012d63;
-  --header-text: #c7c7c7;
-  --nike-color: #ffffff;
-  --button-color: #8e32c6;
-  --date-color: #d8d8d8;
-  --footer-background: #021635;
-  --footer-line: #9b9b9b;
+.footer__bottom, .footer__top, .footer, .order__form, .order, .reviews__box__list__item3, .reviews__box__list__item2, .reviews__box__list__item1__author__about, .reviews__box__list__item1__author, .reviews__box__list__item1, .reviews__box__list, .reviews__box, .reviews, .benefits__box__shipping, .benefits__box__paint, .benefits__box__quality, .benefits__box, .benefits, .action__container, .header__menu__language, .header__menu__list, .header__menu, .header {
+  display: flex;
 }
 
 html {
@@ -19,112 +12,63 @@ body {
 }
 
 .header {
-  display: flex;
   width: 1440px;
   height: 90px;
-  background-color: var(--header-background);
+  background-color: #012d63;
   margin: 0 auto;
 }
-
-.header-menu a {
-  color: var(--header-text);
-  text-decoration: none;
-}
-
-.header-list,
-.header-language,
-.header-menu {
-  display: flex;
-}
-
-.header-nike {
+.header__nike {
   margin: 16px 152px 16px 168px;
 }
-
-.header-menu {
+.header__menu {
   margin-top: 30px;
   margin-bottom: 30px;
   font-size: 24px;
   font-weight: 300;
   line-height: 28.13px;
 }
-
-.header-main {
-  width: 112px;
+.header__menu a {
+  color: #c7c7c7;
+  text-decoration: none;
 }
-
-.header-benefits {
-  width: 86px;
+.header__menu a:hover {
+  font-weight: 400;
+  color: #ffffff;
 }
-
-.header-advantages {
-  width: 125px;
+.header__menu__list {
+  width: 710px;
+  justify-content: space-between;
 }
-
-.header-reviews {
-  width: 88pxpx;
-}
-
-.header-contacts {
-  width: 96px;
-}
-
-.header-order {
-  width: 58px;
-}
-
-.header-language {
+.header__menu__language {
   width: 81px;
   justify-content: space-between;
-
   margin-left: 73px;
 }
 
-.header-list {
-  width: 701px;
-  justify-content: space-between;
-}
-
-.header-menu a:hover {
-  font-weight: 400;
-  color: var(--nike-color);
-}
-
-.main-call_to_action_wrapper {
+.action {
   width: 1440px;
   height: 858px;
-  background: url("../img/colorawe.jpg") no-repeat center/cover;
+  background-image: url("../img/colorawe.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   margin: 0 auto;
 }
-
-.main-call_to_action {
+.action__container {
   margin-left: 156px;
-  color: var(--nike-color);
-  display: flex;
+  color: #ffffff;
   flex-direction: column;
 }
-
-.nike-main {
+.action__container__nike {
+  position: relative;
+  margin-left: 14px;
+}
+.action__container__nike__main {
   width: 160px;
   height: 120px;
   margin-top: 94px;
 }
-
-/* .nike-main::after {
-  content: С&R;
-  position: absolute;
-  font-size: 48px;
-  font-weight: 400;
-  line-height: 63.6px;
-  text-align: left;
-} */
-
-.nike-container {
-  position: relative;
-  margin-left: 14px;
-}
-
-.text-c_and_r {
+.action__container__nike__cr {
   position: absolute;
   bottom: -20px;
   left: 25px;
@@ -132,23 +76,19 @@ body {
   font-size: 48px;
   font-weight: 400;
 }
-
-.mainlogo {
+.action__container__title {
   font-size: 144px;
   font-weight: 400;
-
   margin-top: 27px;
   font-family: "Playfair Display";
 }
-
-.yourdream-text {
+.action__container__subtitle {
   margin-left: 8px;
   font-family: "Playfair Display";
   font-size: 72px;
   font-weight: 400;
 }
-
-.main-call_to_action-text {
+.action__container__text {
   margin-left: 8px;
   margin-top: 25px;
   font-weight: 400;
@@ -158,125 +98,134 @@ body {
   top: 573px;
   margin-bottom: 41px;
 }
-
-.button-buy_my_nike {
+.action__container__button {
   width: 254px;
   height: 67px;
   border-radius: 10px;
-  background-color: var(--button-color);
-  color: var(--nike-color);
+  background-color: #8e32c6;
+  color: #ffffff;
   font-size: 24px;
   font-weight: 400;
   line-height: 28.13px;
 }
 
-.benefits-wrapper {
-  background: url("../img/benefitsbackground.jpg") no-repeat center/cover;
+.benefits {
+  background-image: url("../img/benefitsbackground.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   width: 1440px;
   height: 606px;
   margin: 0 auto;
-  display: flex;
   justify-content: center;
   align-items: center;
 }
-
-.benefits {
+.benefits__box {
   width: 1110px;
   height: 396px;
-  border: 5px solid var(--button-color);
-  display: flex;
+  border: 5px solid #8e32c6;
   padding-right: 50px;
   padding-left: 50px;
   justify-content: space-between;
   align-items: center;
 }
-
-.benefits-item-img {
-  width: 240px;
-  height: 240px;
-}
-
-.benefits-item-paint {
-  width: 430px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-right: 1px solid var(--nike-color);
-  border-left: 1px solid var(--nike-color);
-}
-
-.benefits-item-quality,
-.benefits-item-shipping {
-  display: flex;
+.benefits__box__quality {
   flex-direction: column;
   align-items: center;
 }
-
-.benefits-item-title-quality,
-.benefits-item-title-paint,
-.benefits-item-title-shipping {
+.benefits__box__quality__title {
   font-family: "Playfair Display";
   font-size: 36px;
   font-weight: 400;
   line-height: 47.99px;
-  color: var(--nike-color);
-
+  color: #ffffff;
   width: 159px;
   height: 102px;
 }
-
-.benefits-item-title-quality,
-.benefits-item-title-shipping {
+.benefits__box__paint {
+  width: 430px;
+  flex-direction: column;
+  align-items: center;
+  border-right: 1px solid #ffffff;
+  border-left: 1px solid #ffffff;
+}
+.benefits__box__paint__title {
+  font-family: "Playfair Display";
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 47.99px;
+  color: #ffffff;
+  width: 159px;
+  height: 102px;
+  margin-top: 4px;
+  text-align: center;
+}
+.benefits__box__shipping {
+  flex-direction: column;
+  align-items: center;
+}
+.benefits__box__shipping__title {
+  font-family: "Playfair Display";
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 47.99px;
+  color: #ffffff;
+  width: 159px;
+  height: 102px;
   margin-bottom: 4px;
   text-align: center;
 }
 
-.benefits-item-title-paint {
-  margin-top: 4px;
-  text-align: center;
-}
-
-.reviews-wrapper {
+.reviews {
   width: 1440px;
   height: 520px;
-  background: url("../img/reviewsbackground.jpg") no-repeat center/cover;
+  background-image: url("../img/reviewsbackground.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   margin: 0 auto;
-  display: flex;
-  border: 2px solid var(--nike-color);
+  border: 2px solid #ffffff;
   flex-direction: column;
 }
-
-.reviews-title,
-.order-title {
+.reviews__title {
   width: 175px;
   height: 65px;
   font-family: "Playfair Display";
   font-size: 48px;
   font-weight: 400;
   line-height: 63.98px;
-  color: var(--nike-color);
+  color: #ffffff;
   margin-top: 24px;
   margin-bottom: 24px;
   align-self: center;
 }
-
-.reviews {
-  display: flex;
+.reviews__box {
   width: 1440px;
   height: 407px;
-  background: url("../img/leaves.png") no-repeat bottom left;
+  background-image: url("../img/leaves.png");
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  background-size: cover;
   background-size: 226px 380px;
 }
-
-.reviews-list {
+.reviews__box__list {
   width: 951px;
   height: 292px;
   margin: 0 auto;
-  display: flex;
   justify-content: space-between;
-  color: var(--nike-color);
+  color: #ffffff;
 }
-.reviews-text {
+.reviews__box__list__item1 {
+  width: 255px;
+  height: 292px;
+  border-radius: 15px;
+  flex-direction: column;
+  border-radius: 15px;
+  padding-left: 13px;
+  background: linear-gradient(136.55deg, #00e5e6 7.29%, #00a8f7 26.04%, #9a76f9 62.5%, #cc5ec2 100%);
+  box-shadow: 0px 14px 0px -5px #7b54b2, 0px 30px 0px -13px #533978;
+}
+.reviews__box__list__item1__text {
   font-size: 24px;
   font-weight: 400;
   line-height: 28.13px;
@@ -285,132 +234,86 @@ body {
   margin-top: 49px;
   margin-bottom: 8px;
 }
-
-.review-item1,
-.review-item2,
-.review-item3 {
-  width: 255px;
-  height: 292px;
-  border-radius: 15px;
-  display: flex;
-  flex-direction: column;
-  border-radius: 15px;
-  padding-left: 13px;
-}
-
-.review-item1 {
-  background: linear-gradient(
-    136.55deg,
-    #00e5e6 7.29%,
-    #00a8f7 26.04%,
-    #9a76f9 62.5%,
-    #cc5ec2 100%
-  );
-  box-shadow: 0px 14px 0px -5px #7b54b2, 0px 30px 0px -13px #533978;
-}
-
-.review-item2 {
-  background: linear-gradient(
-    136.55deg,
-    #ff68b4 0%,
-    #ff45e1 26.04%,
-    #ce3aff 62.84%,
-    #8961ff 100%
-  );
-  box-shadow: 0px 14px 0px -5px #9159b1, 0px 30px 0px -13px #61337c;
-}
-
-.review-item3 {
-  background: linear-gradient(
-    142.67deg,
-    #ffe128 0%,
-    #ff9b5c 30.21%,
-    #ff8381 63.29%,
-    #ff5489 100%
-  );
-  box-shadow: 0px 14px 0px -5px #b95a4c, 0px 30px 0px -13px #732f26;
-}
-
-.review-item-date {
+.reviews__box__list__item1__date {
   width: 36px;
   height: 16px;
   font-size: 14px;
   font-weight: 400;
   line-height: 16.41px;
-  color: var(--date-color);
+  color: #d8d8d8;
   margin-bottom: 47px;
 }
-
-.reviews-img {
-  width: 31px;
-  height: 31px;
-  margin-right: 5px;
-}
-
-.review-author-name {
+.reviews__box__list__item1__author__name {
   font-size: 14px;
   font-weight: 400;
   line-height: 16.41px;
 }
-
-.review-from-when {
+.reviews__box__list__item1__author__about {
+  flex-direction: column;
+  margin-bottom: 1px;
+}
+.reviews__box__list__item1__author__date {
   width: 99px;
   height: 14px;
   font-size: 12px;
   font-weight: 400;
   line-height: 14.06px;
-  color: var(--date-color);
+  color: #d8d8d8;
 }
-
-.review-about {
-  display: flex;
+.reviews__box__list__item1__img {
+  width: 31px;
+  height: 31px;
+  margin-right: 5px;
+}
+.reviews__box__list__item2 {
+  width: 255px;
+  height: 292px;
+  border-radius: 15px;
   flex-direction: column;
-  margin-bottom: 1px;
+  border-radius: 15px;
+  padding-left: 13px;
+  background: linear-gradient(136.55deg, #ff68b4 0%, #ff45e1 26.04%, #ce3aff 62.84%, #8961ff 100%);
+  box-shadow: 0px 14px 0px -5px #9159b1, 0px 30px 0px -13px #61337c;
 }
-
-.reviews-author {
-  display: flex;
+.reviews__box__list__item3 {
+  width: 255px;
+  height: 292px;
+  border-radius: 15px;
+  flex-direction: column;
+  border-radius: 15px;
+  padding-left: 13px;
+  background: linear-gradient(142.67deg, #ffe128 0%, #ff9b5c 30.21%, #ff8381 63.29%, #ff5489 100%);
+  box-shadow: 0px 14px 0px -5px #b95a4c, 0px 30px 0px -13px #732f26;
 }
 
 .order {
   width: 1440px;
-  height: 509px;
-  background: url("../img/orderbackground.png") no-repeat center/cover;
+  height: 529px;
+  position: relative;
+  background-image: url("../img/orderbackground.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   margin: 0 auto;
-  display: flex;
   flex-direction: column;
 }
-
-.order-title {
-  margin-top: 20px;
-  margin-bottom: 33px;
-  width: 130px;
-  height: 64px;
+.order__title {
   font-family: "Playfair Display";
   font-size: 48px;
   font-weight: 400;
   line-height: 63.98px;
+  color: #ffffff;
+  align-self: center;
+  margin-top: 20px;
+  margin-bottom: 33px;
+  width: 130px;
+  height: 64px;
 }
-
-.order-form {
-  display: flex;
+.order__form {
   flex-direction: column;
   align-items: center;
 }
-
-.order-button {
-  width: 248px;
-  height: 68px;
-  border-radius: 16px;
-  background-color: var(--button-color);
-  font-size: 24px;
-  font-weight: 400;
-  line-height: 28.13px;
-  color: var(--nike-color);
-  border: none;
-}
-
-.input-email {
+.order__form__input {
   width: 690px;
   height: 60px;
   border-radius: 50px;
@@ -421,98 +324,18 @@ body {
   border: none;
   margin-bottom: 19px;
 }
-
-.input-field {
-  width: 580px;
-  height: 50px;
-  border-radius: 50px;
+.order__form__button {
+  width: 248px;
+  height: 68px;
+  border-radius: 16px;
+  background-color: #8e32c6;
   font-size: 24px;
   font-weight: 400;
   line-height: 28.13px;
-  padding-left: 25px;
-  margin-bottom: 19px;
+  color: #ffffff;
   border: none;
 }
-
-footer {
-  width: 1440px;
-  height: 292px;
-  background-color: var(--footer-background);
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-}
-
-.footer-wrapper-top {
-  width: 1110px;
-  height: 169px;
-  margin: 0 auto;
-  border-bottom: 1px solid var(--footer-line);
-  display: flex;
-}
-.footer-left-top-section,
-.footer-right-top-section {
-  width: 555px;
-  margin-top: 45px;
-}
-
-.footer-wrapper-top p,
-.footer-wrapper-top a {
-  font-size: 24px;
-  font-weight: 400;
-  line-height: 28px;
-  color: var(--nike-color);
-  display: block;
-  margin-bottom: 10px;
-}
-
-.footer-wrapper-top a {
-  float: right;
-}
-
-.footer-wrapper-bottom {
-  width: 1110px;
-  height: 123px;
-  margin: 0 auto;
-  display: flex;
-}
-.footer-wrapper-bottom-left p {
-  height: 21px;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 21.09px;
-  color: var(--nike-color);
-  width: 1041px;
-}
-
-.rightsreserved {
-  margin-top: 24px;
-  margin-bottom: 7px;
-}
-
-.footer-wrapper-bottom-right p {
-  width: 60px;
-  height: 86px;
-  color: var(--nike-color);
-  font-family: "PT Serif";
-  font-size: 24px;
-  font-weight: 400;
-  line-height: 31.8px;
-  margin-top: 60px;
-}
-
-.footer-wrapper-bottom {
-  width: 1110px;
-  background: url("../img/nike.svg") no-repeat;
-  background-position: 1015px -1px;
-  background-size: 108px 81px;
-}
-
-.order {
-  position: relative;
-}
-
-.confirm {
+.order__confirm {
   position: absolute;
   width: 250px;
   height: 50px;
@@ -520,9 +343,81 @@ footer {
   left: 808px;
   border-style: none;
   border-radius: 50px;
-  color: var(--footer-line);
-  background-color: var(--nike-color);
+  color: #9b9b9b;
+  background-color: #ffffff;
   font-size: 28px;
   font-weight: 400;
   line-height: 32.81px;
+}
+
+.footer {
+  width: 1440px;
+  height: 292px;
+  background-color: #021635;
+  margin: 0 auto;
+  flex-direction: column;
+}
+.footer__top {
+  width: 1110px;
+  height: 169px;
+  margin: 0 auto;
+  border-bottom: 1px solid #9b9b9b;
+}
+.footer__top p {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 28px;
+  color: #ffffff;
+  display: block;
+  margin-bottom: 10px;
+}
+.footer__top a {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 28px;
+  color: #ffffff;
+  display: block;
+  margin-bottom: 10px;
+  float: right;
+}
+.footer__top__left {
+  width: 555px;
+  margin-top: 45px;
+}
+.footer__top__right {
+  width: 555px;
+  margin-top: 45px;
+}
+.footer__bottom {
+  width: 1110px;
+  height: 123px;
+  margin: 0 auto;
+  background-image: url("../img/nike.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-position: 1015px -1px;
+  background-size: 108px 81px;
+}
+.footer__bottom__left__rights {
+  margin-top: 24px;
+  margin-bottom: 7px;
+}
+.footer__bottom__left p {
+  height: 21px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21.09px;
+  color: #ffffff;
+  width: 1041px;
+}
+.footer__bottom__right p {
+  width: 60px;
+  height: 86px;
+  color: #ffffff;
+  font-family: "PT Serif";
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 31.8px;
+  margin-top: 60px;
 }
